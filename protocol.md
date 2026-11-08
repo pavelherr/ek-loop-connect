@@ -120,6 +120,12 @@ Fan channels are identified by the following 2 byte constants.
 | F5  | `0xa1, 0x20` |
 | F6  | `0xa1, 0xe0` |
 
+F6 uses the pump channel in the EK Connect software. The application reads
+F1-F5 through the generic fan functions, but reads and controls F6 through
+`GetPump`/`SetPump`, which address `0xa1, 0xe0`. The generic fan functions in
+the same library map their channel number 6 to `0xa1, 0x40`; that is not the
+channel used for F6 by the EK application.
+
 
 ### Sensors
 

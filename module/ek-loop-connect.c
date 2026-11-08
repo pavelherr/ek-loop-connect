@@ -82,7 +82,7 @@ static const u8 fan_channels[][CHANNEL_SIZE] = {
         {0xa0, 0xe0},
         {0xa1, 0x00},
         {0xa1, 0x20},
-        {0xa1, 0xe0},
+        {0xa1, 0xe0}, /* F6 uses the pump channel in the vendor software. */
 };
 
 static const char fan_labels[][3] = {"F1", "F2", "F3", "F4", "F5", "F6"};
